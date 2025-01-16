@@ -6,7 +6,7 @@ body{
   height: 100vh;
   box-sizing: border-box;
   font-family: "Open Sans", serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .navbar{
   display: flex;
@@ -60,6 +60,9 @@ body{
 
 /* Responsive */
 @media only screen and (max-width: 650px) {
+  .navbar{
+    overflow: hidden;
+  }
   .navbar .nav-user{
     font-size: 1.2em;
   }
@@ -75,12 +78,13 @@ body{
     width: 100%;
     justify-content: space-around;
     background-color: yellow;
-    transform: translateX(100%) ;
+    transform: translateX(-100%) ;
     transition: 1s ease;
     z-index: -1;
   }
   .navbar .navbar-nav.slide{
     transform: translateX(0) ;
+    overflow: hidden;
   }
   .navbar .hamburger span{
     display: block;
